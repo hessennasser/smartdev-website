@@ -9,8 +9,8 @@
 
 :root {
     --main-color: #29ACFF;
-    --main-color-alt: #27187e;
-    --second-color: #1C00FF;
+    --main-color-alt: #163850;
+    --second-color: #fff;
     --second-color-alt: #000526;
     --main-transition: .3s;
     --main-padding-top: 60px;
@@ -188,28 +188,25 @@ ul {
     }
 }
 
-.spacial-heading:before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background-color: var(--main-color);
-    position: absolute;
-    border-radius: 50%;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
+.spacial-heading:before,
 .spacial-heading:after {
     content: "";
     width: 12px;
     height: 12px;
-    background-color: var(--main-color);
+    background: #fff;
     position: absolute;
     border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.spacial-heading:before {
+    left: -30px;
+    top: 50%;
+}
+
+.spacial-heading:after {
     right: -30px;
     top: 50%;
-    transform: translateY(-50%);
 }
 
 .spacial-heading:hover {
@@ -219,75 +216,17 @@ ul {
     ;
 }
 
-.spacial-heading:hover::before {
+.spacial-heading:hover::before,
+.spacial-heading:hover::after {
     z-index: -1;
+}
+
+.spacial-heading:hover::before {
     animation: left-move .3s linear forwards;
 }
 
 .spacial-heading:hover::after {
-    z-index: -1;
     animation: right-move .3s linear forwards;
-}
-
-
-.sub-title {
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--main-color);
-    font-size: 32px;
-    font-weight: 900;
-    text-transform: uppercase;
-    position: relative;
-    width: fit-content;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    transition: .7s;
-}
-
-.sub-title:hover {
-    color: #fff;
-}
-
-.sub-title::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 100%;
-    background-color: var(--main-color);
-    left: -15px;
-    transition: .7s;
-}
-
-.sub-title:hover::before {
-    width: calc(100% + 30px);
-    border-right: 10px solid var(--main-color);
-    background-color: var(--second-color-alt);
-    z-index: -1;
-}
-
-
-.note {
-    margin-top: 10px;
-    text-align: center;
-    background: var(--main-color);
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px;
-    border-radius: 10px 20px;
-    transition: var(--main-transition);
-
-}
-
-.note:hover {
-    border-radius: 0;
-}
-
-.note span,
-.note a {
-    color: #fff;
 }
 
 .dis-none {
@@ -362,7 +301,15 @@ ul {
 }
 
 /* end up button and whats app btn */
+.sub-page {
+    background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
+}
+
 /* end components  */
+.wrapper {
+    background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
+}
+
 /* start header  */
 header {
     width: 100%;
@@ -546,8 +493,6 @@ header .nav li a:hover {
 .landing {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
-    background: rgb(28, 74, 106);
-    background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -603,9 +548,9 @@ header .nav li a:hover {
 }
 
 .landing .contact-btn:hover {
-    color: #fff;
+    color: var(--main-color);
     padding: 10px 30px;
-    background-color: var(--main-color);
+    background-color: var(--second-color);
     margin-bottom: 30px;
     display: block;
     width: fit-content;
@@ -623,7 +568,6 @@ header .nav li a:hover {
 .services {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
-    background-color: var(--section-background);
 }
 
 .services .content {
@@ -700,7 +644,6 @@ header .nav li a:hover {
 .projects {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
-    background-color: var(--section-background);
 }
 
 .projects .content {
@@ -833,6 +776,10 @@ header .nav li a:hover {
     background-image: url(../images/projects/13.png);
 }
 
+.img14 {
+    background-image: url(../images/projects/14.png);
+}
+
 /* end projects images  */
 /* end projects  */
 
@@ -884,6 +831,7 @@ header .nav li a:hover {
 .ya {
     background-image: url(../images/salla-stores/ya.png);
 }
+
 .final-touch {
     background-image: url(../images/salla-stores/final-touch.png);
 }
@@ -896,7 +844,6 @@ header .nav li a:hover {
 .contact {
     padding-top: var(--main-padding-top);
     min-height: 100vh;
-    background-color: var(--section-background);
     padding-bottom: var(--main-padding-bottom);
 }
 
@@ -913,7 +860,7 @@ header .nav li a:hover {
 .contact .content form .main-input {
     padding: 20px;
     display: block;
-    border: 1px solid var(--second-color);
+    border: 2px solid var(--main-color);
     margin-bottom: 30px;
     width: 100%;
     color: var(--main-color);
@@ -945,7 +892,7 @@ header .nav li a:hover {
 }
 
 .contact .content form input[type="submit"]:hover {
-    background-color: var(--main-color-alt);
+    background-color: #11496c;
 }
 
 @media (max-width:767px) {
@@ -998,17 +945,11 @@ header .nav li a:hover {
 .contact .content .info .box i {
     font-size: 1.7em;
     margin-right: 25px;
-    color: var(--main-color);
-    transition: var(--main-transition);
-}
-
-.contact .content .info .box i:hover {
-    color: var(--main-color-alt);
-
+    color: #fff;
 }
 
 .contact .content .info .box P {
-    color: var(--main-color-alt);
+    color: #fff;
     font-size: .9em;
 }
 
@@ -1061,6 +1002,11 @@ header .nav li a:hover {
 .contact .content .info .box .button p,
 .contact .content .info .box .button i {
     color: #fff;
+}
+
+.contact .content .info .box .button:hover p,
+.contact .content .info .box .button:hover i {
+    color: var(--main-color);
 }
 
 .contact .content .info .box .button i {
@@ -1152,7 +1098,7 @@ header .nav li a:hover {
         width: 50%;
         height: 100%;
         border-radius: 0;
-        background-color: var(--main-color-alt);
+        background-color: #658ca7;
     }
 }
 
@@ -1168,7 +1114,7 @@ header .nav li a:hover {
         width: 51%;
         height: 100%;
         border-radius: 0;
-        background-color: var(--main-color-alt);
+        background-color: #658ca7;
     }
 }
 

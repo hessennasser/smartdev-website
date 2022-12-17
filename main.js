@@ -16,7 +16,7 @@ function myFunction() {
 btnUp = document.querySelector('.up-btn');
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 150) {
         btnUp.classList.add("active");
     } else {
         btnUp.classList.remove("active");
@@ -33,7 +33,7 @@ btnUp.addEventListener("click", function () {
 // start btn-up 
 whatsBtn = document.querySelector('.whats-btn');
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 150) {
         whatsBtn.classList.add("active");
     } else {
         whatsBtn.classList.remove("active");
