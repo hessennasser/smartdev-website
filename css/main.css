@@ -440,11 +440,11 @@ header .nav .nav-text {
         gap: 0;
         width: 100%;
         flex-direction: column;
-        background-color: #000526;
         align-items: center;
         min-height: 100vh;
         justify-content: space-evenly;
         padding-bottom: 20px;
+        background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
     }
 
     header .nav.active li {
