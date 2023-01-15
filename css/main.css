@@ -193,7 +193,8 @@ ul {
     content: "";
     width: 12px;
     height: 12px;
-    background: #fff;
+    /* background: #fff; */
+    background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
     position: absolute;
     border-radius: 50%;
     transform: translateY(-50%);
@@ -239,6 +240,7 @@ ul {
     position: fixed;
     width: 60px;
     height: 60px;
+    bottom: -100px;
     z-index: 20;
     border-radius: 50%;
     cursor: pointer;
@@ -258,12 +260,10 @@ ul {
 
 .up-btn {
     right: 10px;
-    bottom: -70px;
 }
 
 .whats-btn {
     left: 10px;
-    bottom: -70px;
 }
 
 .up-btn::before,
@@ -304,7 +304,10 @@ ul {
 .sub-page {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
 }
-
+select#lang{
+    padding: 2px 10px;
+    text-transform: capitalize;
+}
 /* end components  */
 .wrapper {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
@@ -468,7 +471,9 @@ header .nav li a {
     transition: var(--main-transition);
 }
 
-header .nav li a:hover {
+header .nav li a:hover,
+header .nav li a:active,
+header .nav li a:focus{
     color: var(--main-color);
     border-bottom: 4px solid var(--main-color);
 }
@@ -497,70 +502,150 @@ header .nav li a:hover {
     background-size: cover;
     min-height: 100vh;
     position: relative;
+    display: flex;
 }
 
 .landing .container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.landing .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(130deg, rgb(6 8 10) 0%, rgb(30 119 191) 100%);
+    padding: 50px;
+    border-radius: 30px;
+    border-top-right-radius: 75px;
+    border: 1px solid rgb(255 255 255);
+}
+
+.landing-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
+    order: 3;
 }
 
-.landing .img-intro,
-.landing .img-intro img {
-    width: 500px;
+.landing-social a {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 26px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: var(--main-transition);
 }
 
-@media (max-width: 767px) {
+.landing-social a:is(:hover, :active) {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+}
 
-    .landing .img-intro,
-    .landing .img-intro img {
-        width: 200px !important;
-        margin-bottom: 50px;
-    }
+
+.landing-img img {
+    width: 60%;
+}
+
+.landing-text h1 {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.landing-text :where(h1, h2) {
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
+}
+
+.landing-text h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #29acff;
+    letter-spacing: 2px;
+
+}
+
+.landing-text p {
+    margin-bottom: 25px;
+    color: #f6f6f6;
+}
+
+.landing-text p span {
+    color: var(--main-color);
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
 
 .landing .btn {
     color: #fff;
     padding: 10px 30px;
-    background-color: var(--main-color);
-    margin-bottom: 30px;
+    background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
+    margin-bottom: 20px;
     display: block;
-    width: fit-content;
+    width: 230px;
     border-radius: 25px;
     font-size: 1.4em;
     font-weight: 500;
     transition: var(--main-transition);
     position: relative;
-    top: -100px;
     text-transform: capitalize;
+    border: 1px solid transparent;
+    text-align: center;
 }
 
 .landing .btn:hover {
-    background-color: transparent;
+    background: transparent;
     border: 1px solid var(--main-color);
 }
 
 .landing .contact-btn {
-    background-color: transparent;
+    background: transparent;
     border: 1px solid var(--main-color);
     transition: var(--main-transition);
 }
 
 .landing .contact-btn:hover {
-    color: var(--main-color);
-    padding: 10px 30px;
-    background-color: var(--second-color);
-    margin-bottom: 30px;
-    display: block;
-    width: fit-content;
-    border-radius: 25px;
-    font-size: 1.4em;
-    font-weight: 500;
-    position: relative;
-    top: -100px;
-    text-transform: capitalize;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
+}
 
+@media (max-width: 767px) {
+    .landing .content {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 45px;
+    }
+
+    .landing-social {
+        order: 1;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .landing-img {
+        display: none;
+    }
+
+    .landing-text {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 /* end landing */
@@ -632,6 +717,7 @@ header .nav li a:hover {
     margin-bottom: 20px;
     font-weight: 700;
     color: #fff;
+    text-transform: capitalize;
 }
 
 .services .content .box p {
@@ -700,7 +786,7 @@ header .nav li a:hover {
     top: -60px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999999999;
+    z-index: 999;
     cursor: pointer;
     transition: 0.5s;
     display: flex;
@@ -714,132 +800,29 @@ header .nav li a:hover {
 }
 
 .link-view {
-    color: #ff0039;
-    font-size: 24px;
-    margin: 0 5px;
+    color: #fff;
+    font-size: 18px;
+    margin: 0px 5px;
+    background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .text-link {
     font-size: 12px;
+    font-size: 12px;
+    width: fit-content;
+    border-radius: 0;
+    height: fit-content;
+    padding: 7px 10px;
 }
 
-/* start projects images  */
-.img1 {
-    background-image: url(../images/projects/1.png);
-}
-
-.img2 {
-    background-image: url(../images/projects/2.png);
-}
-
-.img3 {
-    background-image: url(../images/projects/3.png);
-}
-
-.img4 {
-    background-image: url(../images/projects/4.png);
-}
-
-.img5 {
-    background-image: url(../images/projects/5.png);
-}
-
-.img6 {
-    background-image: url(../images/projects/6.png);
-}
-
-.img7 {
-    background-image: url(../images/projects/7.png);
-}
-
-.img8 {
-    background-image: url(../images/projects/8.png);
-}
-
-.img9 {
-    background-image: url(../images/projects/9.png);
-}
-
-.img10 {
-    background-image: url(../images/projects/10.png);
-}
-
-.img11 {
-    background-image: url(../images/projects/11.png);
-}
-
-.img12 {
-    background-image: url(../images/projects/12.png);
-}
-
-.img13 {
-    background-image: url(../images/projects/13.png);
-}
-
-.img14 {
-    background-image: url(../images/projects/14.png);
-}
-.img15 {
-    background-image: url(../images/projects/15.png);
-}
-
-/* end projects images  */
 /* end projects  */
-
-/* start salla images  */
-.panda {
-    background-image: url(../images/salla-stores/panda.png);
-}
-
-.mrstorex {
-    background-image: url(../images/salla-stores/mrstorex.png);
-}
-
-.revn {
-    background-image: url(../images/salla-stores/revn.png);
-}
-
-.bashmil {
-    background-image: url(../images/salla-stores/bashmil.png);
-}
-
-.start-of-care {
-    background-image: url(../images/salla-stores/start-of-care.png);
-}
-
-.rong {
-    background-image: url(../images/salla-stores/rong.png);
-}
-
-.aesthetics {
-    background-image: url(../images/salla-stores/aesthetics.png);
-}
-
-.aisal {
-    background-image: url(../images/salla-stores/aisel.png);
-}
-
-.kid-zone {
-    background-image: url(../images/salla-stores/kidzone.png);
-}
-
-.spacial-care {
-    background-image: url(../images/salla-stores/special-care.png);
-}
-
-.games-house {
-    background-image: url(../images/salla-stores/games-house.png);
-}
-
-.ya {
-    background-image: url(../images/salla-stores/ya.png);
-}
-
-.final-touch {
-    background-image: url(../images/salla-stores/final-touch.png);
-}
-
-/* end salla images  */
 
 
 
@@ -1101,7 +1084,8 @@ header .nav li a:hover {
         width: 50%;
         height: 100%;
         border-radius: 0;
-        background-color: #658ca7;
+        /* background-color: #658ca7; */
+        background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
     }
 }
 
@@ -1117,7 +1101,8 @@ header .nav li a:hover {
         width: 51%;
         height: 100%;
         border-radius: 0;
-        background-color: #658ca7;
+        /* background-color: #658ca7; */
+        background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
     }
 }
 

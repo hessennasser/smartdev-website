@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart DEV</title>
+  <meta name="description"
+    content="  Hi I'm smart dev (hessen nasser)
+  Front End Developer | Graphic Designer | UX &amp; UI Designer | Video Editor
+  I am experienced in developing and designing websites with more than 7 months of experience and i can create your spacial website from zero to hero by using best practices, also i am a professional graphic designer and video editor">
+  <meta name="keywords"
+    content="smartdev,smart dev,sm8rtdev,sm8rt dev,smartdev website,sm8rtdev website,smart dev website,sm8rt dev website,hessen nasser profile,front-end developer,website developer,website designer,hessen alosh,smart dev profile,smartdev profile,smartdev.online,sma8rtdev.online,salla developer,salla designer,salla stores,salla,salla editor,hessen nasser,hessen nasser website,graphic designer,video editor,UX & UI designer,front end developer,JS developer,مطور سلة, منصة سله,حسين ناصر, سمارت ديف,مطور ويب, مصمم ويب">
+  <title>Smart Dev</title>
   <link rel="icon" type="image/x-icon" href="images/logo shape.png">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/all.min.css" />
   <!-- Font Awesome Online Link   -->
   <script src="https://kit.fontawesome.com/d633f21f4a.js" crossorigin="anonymous"></script>
   <!-- Google Fonts -->
@@ -23,11 +27,11 @@
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
   <!-- start button to move up page  -->
   <span class="up-btn-div">
-    <a class="up-btn"><i class="fa-solid fa-up-long"></i></a>
+    <span class="up-btn"><i class="fa-solid fa-up-long"></i></span>
   </span>
   <!-- end button to move up page  -->
   <!-- start whatsapp-btn  -->
-  <a href="https://wa.me/201064766851" target="_blank">
+  <a aria-label="whats app number" href="https://wa.me/201064766851" target="_blank">
     <span class="whats-btn">
       <i class="fa-brands fa-whatsapp"></i>
     </span>
@@ -37,7 +41,7 @@
   <header>
     <div class="container">
       <!-- <img src="" alt="logo" class="logo"> -->
-      <div class="logo-name"><a href="index.html"><img src="images/logo shape.png" alt=""></a></div>
+      <div class="logo-name"><a href="index.html"><img src="images/logo shape.png" alt="smart dev logo"></a></div>
       <div class="menu-icon" id="menu">
         <span></span>
         <span></span>
@@ -45,7 +49,7 @@
       </div>
       <ul class="nav">
         <div class="logo-img-nav">
-          <img src="images/logo shape.png" alt="">
+          <img src="images/logo shape.png" alt="smart dev logo shape">
         </div>
         <a class="nav-text" href="index.html">Smart DEV Website</a>
         <li><a onclick="myFunction()" class="link-header" href="#home">home</a></li>
@@ -62,14 +66,28 @@
     <div class="landing" id="home">
       <div class="container">
         <div class="content">
-          <div class="text">
-            <div class="container">
-              <div class="img-intro">
-                <img src="images/smart-dev-2.webp" alt="">
-              </div>
-              <a href="#projects" class="btn">view my Projects</a>
-              <a href="#content" class="btn contact-btn">content me</a>
-            </div>
+          <div class="landing-social">
+            <a aria-label="github acount" href="https://github.com/hessennasser" class="landing-link" target="_blank"><i
+                class="fa-brands fa-github"></i></a>
+            <a aria-label="instagram page" href="https://www.instagram.com/smartdev82/" class="landing-link"
+              target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a aria-label="whats app number" href="https://wa.me/201064766851" class="landing-link" target="_blank"><i
+                class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <!-- <div class="landing-img">
+            <img src="images/logo shape.png" alt="">s
+          </div> -->
+          <div class="landing-text">
+            <h1>hello there in smart dev website</h1>
+            <h2 class="landing-title">I'am Hessen Nasser</h2>
+            <h3 class="landing-subtitle">Front-End Developer</h3>
+            <p class="landing-phara">I am experienced in developing and designing websites with <span>more than 7 months
+                of experience</span></p>
+            <a aria-label="view my Projects" href="#projects" class="btn">view my Projects</a>
+            <a aria-label="contact me" href="#contact" class="btn contact-btn">content me</a>
+            <a aria-label="download CV" download href="CV.pdf" class="btn contact-btn">Download CV</a>
           </div>
         </div>
       </div>
@@ -106,9 +124,9 @@
         <h2 class="spacial-heading">projects</h2>
         <div class="content">
           <div class="card">
-            <div class="project-img img1">
+            <div class="project-img" style="background-image: url(images/projects/1.png);">
               <div class="caption">
-                Responsive Simple Shope Home Page
+                Responsive Simple Shop Home Page
               </div>
             </div>
             <span class="links">
@@ -119,7 +137,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img2">
+            <div class="project-img" style="background-image: url(images/projects/2.png);">
               <div class="caption">
                 Responsive Login And Registration Form
               </div>
@@ -132,7 +150,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img3">
+            <div class="project-img" style="background-image: url(images/projects/3.png);">
               <div class="caption">
                 Responsive StarBucks Home Page
               </div>
@@ -145,7 +163,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img4">
+            <div class="project-img" style="background-image: url(images/projects/4.png);">
               <div class="caption">
                 Responsive Profile Website
               </div>
@@ -158,7 +176,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img5">
+            <div class="project-img" style="background-image: url(images/projects/5.png);">
               <div class="caption">
                 Green-Furniture Shop Page
               </div>
@@ -171,7 +189,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img6">
+            <div class="project-img" style="background-image: url(images/projects/6.png);">
               <div class="caption">
                 ELzero Template 1 By My Way
               </div>
@@ -184,7 +202,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img7">
+            <div class="project-img" style="background-image: url(images/projects/7.png);">
               <div class="caption">
                 ELzero Template 2 By My Way
               </div>
@@ -197,7 +215,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img8">
+            <div class="project-img" style="background-image: url(images/projects/8.png);">
               <div class="caption">
                 ELzero Template 3 By My Way
               </div>
@@ -210,7 +228,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img9">
+            <div class="project-img" style="background-image: url(images/projects/9.png);">
               <div class="caption">
                 ELzero Template 4 By My Way
               </div>
@@ -223,7 +241,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img10">
+            <div class="project-img" style="background-image: url(images/projects/10.png);">
               <div class="caption">
                 Responsive Solar System Landing Page
               </div>
@@ -236,7 +254,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img11">
+            <div class="project-img" style="background-image: url(images/projects/11.png);">
               <div class="caption">
                 Apple Responsive Landing Page Website
               </div>
@@ -249,7 +267,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img12">
+            <div class="project-img" style="background-image: url(images/projects/12.png);">
               <div class="caption">
                 Responsive Swiper Landing Page
               </div>
@@ -262,7 +280,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img13">
+            <div class="project-img" style="background-image: url(images/projects/13.png);">
               <div class="caption">
                 Responsive Tour In Egypt Page
               </div>
@@ -275,7 +293,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img14">
+            <div class="project-img" style="background-image: url(images/projects/14.png);">
               <div class="caption">
                 Responsive Landio - Landing page
               </div>
@@ -288,7 +306,7 @@
             </span>
           </div>
           <div class="card">
-            <div class="project-img img15">
+            <div class="project-img" style="background-image: url(images/projects/15.png);">
               <div class="caption">
                 money- responsive landing page
               </div>
@@ -300,11 +318,23 @@
                   class="fa-solid fa-code"></i></a>
             </span>
           </div>
+          <div class="card">
+            <div class="project-img" style="background-image: url(images/projects/16.png);">
+              <div class="caption">
+                Responsive Blog Website Multipage
+              </div>
+            </div>
+            <span class="links">
+              <a href="https://hessennasser.github.io/Responsive-Blog/" target="_blank" class="link-view"><i
+                  class="fa-solid fa-eye"></i></a>
+              <a href="https://github.com/hessennasser/Responsive-Blog" target="_blank" class="link-view"><i
+                  class="fa-solid fa-code"></i></a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
     <!-- end projects  -->
-
     <!-- start salla stores section  -->
     <section class="salla" id="salla-stores">
       <div class="projects" id="projects">
@@ -312,7 +342,7 @@
           <h2 class="spacial-heading">salla stores</h2>
           <div class="content">
             <div class="card">
-              <div class="project-img panda">
+              <div class="project-img" style="background-image: url(images/salla-stores/panda.png);">
                 <div class="caption">
                   Panda Store
                 </div>
@@ -322,7 +352,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img mrstorex">
+              <div class="project-img" style="background-image: url(images/salla-stores/mrstorex.png);">
                 <div class="caption">
                   Mrstorex Store
                 </div>
@@ -332,7 +362,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img revn">
+              <div class="project-img" style="background-image: url(images/salla-stores/revn.png);">
                 <div class="caption">
                   Revn Store
                 </div>
@@ -342,7 +372,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img bashmil">
+              <div class="project-img" style="background-image: url(images/salla-stores/bashmil.png);">
                 <div class="caption">
                   Bashmil Store
                 </div>
@@ -352,7 +382,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img start-of-care">
+              <div class="project-img" style="background-image: url(images/salla-stores/start-of-care.png);">
                 <div class="caption">
                   Start Of Care Store
                 </div>
@@ -363,7 +393,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img rong">
+              <div class="project-img" style="background-image: url(images/salla-stores/rong.png);">
                 <div class="caption">
                   Rong Store
                 </div>
@@ -374,7 +404,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img aesthetics">
+              <div class="project-img" style="background-image: url(images/salla-stores/aesthetics.png);">
                 <div class="caption">
                   Aesthetics Store
                 </div>
@@ -386,7 +416,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img aisal">
+              <div class="project-img" style="background-image: url(images/salla-stores/aisel.png);">
                 <div class="caption">
                   Aisal Store
                 </div>
@@ -397,7 +427,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img kid-zone">
+              <div class="project-img" style="background-image: url(images/salla-stores/kidzone.png);">
                 <div class="caption">
                   Kid Zone Store
                 </div>
@@ -408,7 +438,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img spacial-care">
+              <div class="project-img" style="background-image: url(images/salla-stores/special-care.png);">
                 <div class="caption">
                   Special Care Store
                 </div>
@@ -420,7 +450,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img games-house">
+              <div class="project-img" style="background-image: url(images/salla-stores/games-house.png);">
                 <div class="caption">
                   Games House Store
                 </div>
@@ -432,7 +462,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img ya">
+              <div class="project-img" style="background-image: url(images/salla-stores/ya.png);">
                 <div class="caption">
                   YA Store
                 </div>
@@ -443,7 +473,7 @@
               </span>
             </div>
             <div class="card">
-              <div class="project-img final-touch">
+              <div class="project-img" style="background-image: url(images/salla-stores/final-touch.png);">
                 <div class="caption">
                   final-touch Store
                 </div>
@@ -454,12 +484,100 @@
                 <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
               </span>
             </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/NBS-store.png);">
+                <div class="caption">
+                  final-touch Store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://nbs-onlin.com/" target="_blank" class="link-view"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/sedal.png);">
+                <div class="caption">
+                  sedal Store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://se-dal.com/" target="_blank" class="link-view"><i class="fa-solid fa-eye"></i></a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/tone.png);">
+                <div class="caption">
+                  tone Store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://tone-shops.com/" target="_blank" class="link-view"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/WA-store.png);">
+                <div class="caption">
+                  WA Store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://wa-store-sa.com/" target="_blank" class="link-view"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/sh-shops.png);">
+                <div class="caption">
+                  SH Shop
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://sh-shops.com/" target="_blank" class="link-view"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/syezlyear.png);">
+                <div class="caption">
+                  syezlyear store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://syezlyear-shop.com/" target="_blank" class="link-view"><i
+                    class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/brooj.png);">
+                <div class="caption">
+                  Brooj store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://brooj-store.com/" target="_blank" class="link-view"><i class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
+            <div class="card">
+              <div class="project-img" style="background-image: url(images/salla-stores/onecare.png);">
+                <div class="caption">
+                  one-care store
+                </div>
+              </div>
+              <span class="links">
+                <a href="https://onecare-online.com/" target="_blank" class="link-view"><i
+                    class="fa-solid fa-eye"></i></a>
+                <a href="https://zaya.digital/" target="_blank" class="link-view text-link">مع زايا الرقمية</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- end salla stores section  -->
-
     <!-- start contact  -->
     <div class="contact" id="contact">
       <div class="container">
