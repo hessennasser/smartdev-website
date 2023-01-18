@@ -287,7 +287,7 @@ ul {
 
 .up-btn.active,
 .whats-btn.active {
-    bottom: 20px;
+    bottom: 20px !important;
 }
 
 .up-btn i,
@@ -706,9 +706,10 @@ header .nav li a:focus{
     box-shadow: 0px 5px 10px #a9a8a8;
 }
 
-.services .content .box i {
+.services .content .box lord-icon {
     font-size: 2.5em;
     color: #fff;
+    fill: #fff;
     margin-bottom: 20px;
 }
 
