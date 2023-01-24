@@ -304,15 +304,11 @@ ul {
 .sub-page {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
 }
-select#lang{
-    padding: 2px 10px;
-    text-transform: capitalize;
-}
-/* end components  */
 .wrapper {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
 }
 
+/* end components  */
 /* start header  */
 header {
     width: 100%;
