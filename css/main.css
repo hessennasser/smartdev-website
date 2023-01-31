@@ -3,7 +3,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
 }
 
@@ -14,7 +13,7 @@
     --second-color-alt: #000526;
     --main-transition: .3s;
     --main-padding-top: 60px;
-    --main-padding-bottom: 60px;
+    --main-padding-bottom: 0px;
     --section-background: #d0d0d086;
 }
 
@@ -303,6 +302,7 @@ ul {
 /* end up button and whats app btn */
 .sub-page {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
+    padding: 30px 0;
 }
 .wrapper {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
@@ -492,11 +492,10 @@ header .nav li a:focus{
 /* end header  */
 /* start landing */
 .landing {
-    padding-top: var(--main-padding-top);
+    padding-top: 70px;
     padding-bottom: var(--main-padding-bottom);
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
     position: relative;
     display: flex;
 }
@@ -518,6 +517,8 @@ header .nav li a:focus{
     border-radius: 30px;
     border-top-right-radius: 75px;
     border: 1px solid rgb(255 255 255);
+    margin-top: 70px;
+
 }
 
 .landing-social {
@@ -726,7 +727,6 @@ header .nav li a:focus{
 /* start projects  */
 .projects {
     padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
 }
 
 .projects .content {
@@ -826,7 +826,6 @@ header .nav li a:focus{
 /* start contact  */
 .contact {
     padding-top: var(--main-padding-top);
-    min-height: 100vh;
     padding-bottom: var(--main-padding-bottom);
 }
 
