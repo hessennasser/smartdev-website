@@ -290,7 +290,6 @@ ul {
 /* start filter */
 ul.filter {
     display: flex;
-    width: 50%;
     align-items: center;
     align-self: center;
     gap: 20px;
@@ -674,7 +673,7 @@ header .nav li a:focus {
 
 .services .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
     justify-items: center;
 }
