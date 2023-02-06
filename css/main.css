@@ -281,6 +281,7 @@ ul {
 /* end up button and whats app btn */
 .sub-page {
     background: linear-gradient(180deg, rgba(28, 74, 106, 1) 0%, rgba(5, 5, 5, 1) 100%);
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -314,18 +315,21 @@ ul.filter li {
     border: 2px solid var(--main-color);
     margin: 10px 0;
 }
+
 ul.filter li:hover,
-ul.filter li.active{
+ul.filter li.active {
     background-color: var(--main-color);
     color: var(--second-color);
     border: 2px solid var(--second-color);
 }
+
 @media (max-width: 767px) {
     ul.filter {
         width: 100%;
         display: block;
     }
 }
+
 /* end filter */
 /* end components  */
 /* start header  */
@@ -748,10 +752,12 @@ header .nav li a:focus {
     padding-bottom: var(--main-padding-bottom);
     padding-top: var(--main-padding-top);
 }
+
 .projects .container {
     display: flex;
     flex-direction: column;
 }
+
 .projects .content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
