@@ -7,7 +7,6 @@ menuIcon.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 function myFunction() {
-    var element = document.getElementsByClassName("link-header");
     menuIcon.classList.toggle("active");
     navMenu.classList.toggle("active");
 }
