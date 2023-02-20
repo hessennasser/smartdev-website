@@ -76,15 +76,15 @@ function manageCards() {
 //end filter  
 
 ScrollReveal({
-    reset: true,
+    // reset: true,
     distance: "60px",
     duration: 1500,
-    delay: 300
+    delay: 100
 });
 // landing section
 ScrollReveal().reveal('.spacial-heading', { delay: 500, origin: "bottom" });
-ScrollReveal().reveal('.landing-social a', { delay: 500, origin: "right bottom", interval: 150 });
-ScrollReveal().reveal('.landing-text a', { delay: 600, origin: "left", interval: 150 });
+ScrollReveal().reveal('.landing-social a', { delay: 500, origin: "right bottom", interval: 50 });
+ScrollReveal().reveal('.landing-text a', { delay: 600, origin: "left", interval: 50 });
 ScrollReveal().reveal('.landing-text h1', { delay: 500, origin: "left" });
 ScrollReveal().reveal('.landing-text h2', { delay: 550, origin: "left" });
 ScrollReveal().reveal('.landing-text h3', { delay: 600, origin: "left" });
@@ -94,9 +94,9 @@ ScrollReveal().reveal('.services .box:nth-child(1)', { delay: 500, origin: "left
 ScrollReveal().reveal('.services .box:nth-child(2), .services .box:nth-child(3)', { delay: 600, origin: "bottom" });
 ScrollReveal().reveal('.services .box:nth-child(4)', { delay: 700, origin: "left" });
 // projects sections
-ScrollReveal().reveal('.projects .card', { delay: 500, origin: "bottom", interval: 150 });
-ScrollReveal().reveal('.caption', { delay: 600, origin: "right", distance: "80px" });
+ScrollReveal().reveal('.projects .card', { delay: 500, origin: "bottom", interval: 50 });
+ScrollReveal().reveal('.caption', { delay: 600, origin: "right"});
 //content section
-ScrollReveal().reveal('.main-input', { delay: 500, origin: "left", interval: 150 });
+ScrollReveal().reveal('.main-input', { delay: 500, origin: "left", interval: 50 });
 ScrollReveal().reveal('.submit-btn', { delay: 500, origin: "bottom" });
-ScrollReveal().reveal('.contact .box,.box.social button', { delay: 600, origin: "right", interval: 150 });
+ScrollReveal().reveal('.contact .box,.box.social button', { delay: 600, origin: "right", interval: 50 });
