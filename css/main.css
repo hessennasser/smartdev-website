@@ -21,86 +21,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body::before {
-    content: " ";
-    background: #0c0b10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    z-index: 9998;
-    opacity: 0;
-    animation: anofy 2.5s;
-}
 
-body:after {
-    z-index: 9999;
-    position: fixed;
-    content: "";
-    background-image: url("/images/smart-dev-2.webp");
-    background-position: center;
-    background-size: 151px;
-    background-repeat: no-repeat;
-    width: 0;
-    transform: translate(90px, -90px);
-    height: 151px;
-    right: 50%;
-    top: 50%;
-    opacity: 0;
-    animation: naif 1.5s;
-}
-
-@keyframes anofy {
-    0% {
-        width: 100%;
-        opacity: 1;
-    }
-
-    40% {
-        opacity: 1;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    99% {
-        width: 100%;
-    }
-
-    100% {
-        width: 0;
-        opacity: 0;
-        display: none;
-    }
-}
-
-@keyframes naif {
-    0% {
-        width: 400px;
-        opacity: 0;
-    }
-
-    70% {
-        width: 185px;
-        opacity: 1;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    99% {
-        width: 50px;
-    }
-
-    100% {
-        width: 0;
-        opacity: 0;
-        display: none;
-    }
-}
 
 *::selection {
     background-color: var(--second-color-alt);
@@ -121,6 +42,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
     font-family: "Cairo", sans-serif;
+    overflow-x: hidden;
 }
 
 a {
