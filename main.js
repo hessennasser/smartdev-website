@@ -93,10 +93,61 @@ ScrollReveal().reveal('.landing-text p', { delay: 650, origin: "left" });
 ScrollReveal().reveal('.services .box:nth-child(1)', { delay: 500, origin: "left" });
 ScrollReveal().reveal('.services .box:nth-child(2), .services .box:nth-child(3)', { delay: 600, origin: "bottom" });
 ScrollReveal().reveal('.services .box:nth-child(4)', { delay: 700, origin: "left" });
+
+// skills section
+ScrollReveal().reveal('.swiper-wrapper', { delay: 0, origin: "top" });
+
 // projects sections
 ScrollReveal().reveal('.projects .card', { delay: 500, origin: "bottom", interval: 50 });
-ScrollReveal().reveal('.caption', { delay: 600, origin: "right"});
+ScrollReveal().reveal('.caption', { delay: 600, origin: "right" });
 //content section
 ScrollReveal().reveal('.main-input', { delay: 500, origin: "left", interval: 50 });
 ScrollReveal().reveal('.submit-btn', { delay: 500, origin: "bottom" });
 ScrollReveal().reveal('.contact .box,.box.social button', { delay: 600, origin: "right", interval: 50 });
+
+
+// skills swiper 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 7,
+    autoplay: {
+        delay: 2500, // 5 seconds delay between slides
+    },
+    loop: true, // enable loop mode
+    spaceBetween: 20,
+    centerSlide: "true",
+    fade: "true",
+    grabCursor: "true",
+    hashNavigation: {
+        watchState: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        767: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        968: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+    }
+});
+
+// tilt js effect 
+VanillaTilt.init(document.querySelector(".services .content .box",".skill"), {
+    reverse: true,
+    max: 180,
+    scale: 1.5,
+    speed: 600,
+});
