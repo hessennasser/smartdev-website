@@ -75,6 +75,7 @@ function manageCards() {
 }
 //end filter  
 
+//scrollReveal
 ScrollReveal({
     // reset: true,
     distance: "60px",
