@@ -240,7 +240,10 @@ ul.filter li {
     text-transform: capitalize;
 }
 
-ul.filter li:hover,
+ul.filter li:hover {
+    background-color: #a9a8a8;
+    color: #fff;
+}
 ul.filter li.active {
     background-color: var(--main-color);
     color: var(--second-color);
@@ -755,6 +758,7 @@ header .nav li a:focus {
     gap: 25px;
     justify-items: center;
     width: 100%;
+    padding: 15px 0;
 }
 
 .projects .card {
