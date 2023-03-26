@@ -1,79 +1,95 @@
 // start header icon  
 const menuIcon = document.querySelector(".menu-icon");
-const navMenu = document.querySelector(".nav");
-const navLink = document.getElementsByClassName("link-header");
+const mainNavigation = document.querySelector(".nav");
+const headerLinks = document.querySelectorAll(".link-header");
+
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    mainNavigation.classList.toggle("active");
 });
-function myFunction() {
+
+function toggleNavigation() {
     menuIcon.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    mainNavigation.classList.toggle("active");
 }
 // end header icon  
 
 // start sticky header 
-var header = this.document.querySelector("header");
-window.addEventListener("scroll", function () {
+const header = document.querySelector("header");
+
+function toggleStickyHeader() {
     header.classList.toggle("sticky", window.scrollY > 0);
-});
+}
+
+window.addEventListener("scroll", toggleStickyHeader);
 // end sticky header 
 
-// start btn-up 
-btnUp = document.querySelector('.up-btn');
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 250) {
-        btnUp.classList.add("active");
-    } else {
-        btnUp.classList.remove("active");
-    }
-});
-btnUp.addEventListener("click", function () {
+// start scroll-to-top button 
+const scrollToTopBtn = document.querySelector(".up-btn");
+
+function toggleScrollToTopButton() {
+    scrollToTopBtn.classList.toggle("active", window.scrollY > 250);
+}
+
+function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: "smooth",
     });
-});
-// end btn-up 
-// start whats-app btn 
-whatsBtn = document.querySelector('.whats-btn');
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 250) {
-        whatsBtn.classList.add("active");
-    } else {
-        whatsBtn.classList.remove("active");
-    }
-});
-// end whats-app btn 
+}
 
-//start filter  
-let switchersLis = document.querySelectorAll(".filter-item");
-let cards = document.querySelectorAll(".work .card");
-switchersLis.forEach((li) => {
-    li.addEventListener("click", removeActive);
-    li.addEventListener("click", manageCards);
+window.addEventListener("scroll", toggleScrollToTopButton);
+scrollToTopBtn.addEventListener("click", scrollToTop);
+// end scroll-to-top button 
+
+// start WhatsApp button 
+const whatsAppBtn = document.querySelector(".whats-btn");
+
+function toggleWhatsAppButton() {
+    whatsAppBtn.classList.toggle("active", window.scrollY > 250);
+}
+
+window.addEventListener("scroll", toggleWhatsAppButton);
+// end WhatsApp button 
+
+// start filter  
+const filterItems = document.querySelectorAll(".filter-item");
+const workCards = document.querySelectorAll(".work .card");
+
+function removeActiveFilterItem() {
+    filterItems.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
+}
+
+function manageWorkCards() {
+    workCards.forEach((card) => {
+        card.style.display = "none";
+        card.style.transform = "scale(0)";
+        card.style.opacity = "0";
+    });
+
+    document.querySelectorAll(this.dataset.category).forEach((el) => {
+        el.style.display = "block";
+        el.style.transform = "scale(1)";
+        el.style.opacity = "1";
+    });
+}
+
+filterItems.forEach((item) => {
+    item.addEventListener("click", removeActiveFilterItem);
+    item.addEventListener("click", manageWorkCards);
 });
-// remove active class from lis and add to current 
-function removeActive() {
-    switchersLis.forEach((li) => {
-        li.classList.remove("active");
-        this.classList.add("active");
-    });
-}
-// manage cards 
-function manageCards() {
-    cards.forEach((cards) => {
-        cards.style.display = ("none");
-        cards.style.scale = ("0");
-        cards.style.opacity = ("0");
-    });
-    document.querySelectorAll(this.dataset.cat).forEach((el) => {
-        el.style.display = ("block");
-        el.style.scale = ("1");
-        el.style.opacity = ("1");
-    });
-}
-//end filter  
+// end filter  
+
+// update copyright year dynamically
+const copyrightText = document.querySelector(".footer-title");
+const currentYear = new Date().getFullYear();
+
+copyrightText.innerHTML = `Copyright © ${currentYear} <span>Hessen Nasser</span>`;
+
+
+
+
 
 //scrollReveal
 ScrollReveal({
@@ -107,48 +123,3 @@ ScrollReveal().reveal('.submit-btn', { delay: 500, origin: "bottom" });
 ScrollReveal().reveal('.contact .box,.box.social button', { delay: 600, origin: "right", interval: 50 });
 
 
-// skills swiper 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 7,
-    autoplay: {
-        delay: 2500, // 5 seconds delay between slides
-    },
-    loop: true, // enable loop mode
-    spaceBetween: 20,
-    centerSlide: "true",
-    fade: "true",
-    grabCursor: "true",
-    hashNavigation: {
-        watchState: true,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        767: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        968: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-        },
-    }
-});
-
-// tilt js effect 
-VanillaTilt.init(document.querySelector(".services .content .box",".skill"), {
-    reverse: true,
-    max: 180,
-    scale: 1.5,
-    speed: 600,
-});

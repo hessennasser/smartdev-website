@@ -237,6 +237,7 @@ ul.filter li {
     -o-border-radius: 6px;
     border: 2px solid var(--main-color);
     margin: 10px 0;
+    text-transform: capitalize;
 }
 
 ul.filter li:hover,
@@ -1084,13 +1085,13 @@ header .nav li a:focus {
 
 @media (max-width: 767px) {
     .footer .container {
-        padding: 0 40px;
+        padding: 0;
         flex-direction: column;
         text-align: center;
     }
 
     .footer-title {
-        font-size: .8em;
+        font-size: 1rem;
     }
 }
 

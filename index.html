@@ -57,11 +57,11 @@
           <img src="images/logo shape.png" alt="smart dev logo shape">
         </div>
         <a class="nav-text" href="index.html">Smart DEV Website</a>
-        <li><a onclick="myFunction()" class="link-header" href="#home">home</a></li>
-        <li><a onclick="myFunction()" class="link-header" href="#services">services</a></li>
-        <li><a onclick="myFunction()" class="link-header" href="projects.html">projects</a></li>
-        <li><a onclick="myFunction()" class="link-header" href="salla-stores.html">salla stores</a></li>
-        <li><a onclick="myFunction()" class="link-header" href="#contact">contact</a></li>
+        <li><a onclick="toggleNavigation()" class="link-header" href="#home">home</a></li>
+        <li><a onclick="toggleNavigation()" class="link-header" href="#services">services</a></li>
+        <li><a onclick="toggleNavigation()" class="link-header" href="projects.html">projects</a></li>
+        <li><a onclick="toggleNavigation()" class="link-header" href="salla-stores.html">salla stores</a></li>
+        <li><a onclick="toggleNavigation()" class="link-header" href="#contact">contact</a></li>
       </ul>
     </div>
   </header>
@@ -183,14 +183,13 @@
     <div class="projects work" id="projects">
       <div class="container">
         <h2 class="spacial-heading">projects</h2>
-        <!-- <ul class="filter">
-          <li data-cat=".all" class="filter-item active">All tools</li>
-          <li data-cat=".html" class="filter-item">HTMl</li>
-          <li data-cat=".css" class="filter-item">CSS</li>
-          <li data-cat=".js" class="filter-item">JavaScript</li>
-        </ul> -->
+        <ul class="filter">
+          <li data-category=".all" class="filter-item active">All Projects</li>
+          <li data-category=".websites" class="filter-item">websites</li>
+          <li data-category=".js" class="filter-item">Javascript applications</li>
+        </ul>
         <div class="content">
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/simple-profile.png);">
               <div class="caption">
                 Responsive Profile Website
@@ -207,7 +206,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/leon.png);">
               <div class="caption">
                 ELzero Template 1 By My Way
@@ -224,7 +223,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/kasper.png);">
               <div class="caption">
                 ELzero Template 2 By My Way
@@ -241,7 +240,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/best.png);">
               <div class="caption">
                 ELzero Template 3 By My Way
@@ -258,7 +257,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/elzero-dashboard.png);">
               <div class="caption">
                 ELzero Template 4 By My Way
@@ -275,7 +274,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/solar-system.png);">
               <div class="caption">
                 Responsive Solar System Landing Page
@@ -292,7 +291,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/landio.png);">
               <div class="caption">
                 Responsive Landio - Landing page
@@ -309,7 +308,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/money-responsive-landing-page.png);">
               <div class="caption">
                 money- responsive landing page
@@ -326,7 +325,7 @@
                   </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/smartdev-blog.png);">
               <div class="caption">
                 Responsive Blog Website Multipage
@@ -343,7 +342,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/zaya-digital.png);">
               <div class="caption">
                 Zaya Digital - Landing Page
@@ -356,7 +355,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img"
               style="background-image: url(images/projects/marketing-responsive-landing-page.png);">
               <div class="caption">
@@ -374,7 +373,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/agency-responsive-landing-page.png);">
               <div class="caption">
                 Agency - responsive landing page
@@ -391,7 +390,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/rab.png);">
               <div class="caption">
                 رأب للتطوير العقاري
@@ -404,7 +403,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/bondi.png);">
               <div class="caption">
                 Bondi Bootstrap Template
@@ -421,7 +420,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/saviour-care.png);">
               <div class="caption">
                 Saviour-Care Landing Page By TailwindCSS
@@ -438,7 +437,7 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/tokners.png);">
               <div class="caption">
                 Tokners Responsive Landing Page By TailwindCSS
@@ -455,20 +454,20 @@
                 </lord-icon></a>
             </span>
           </div>
-          <div class="card">
+          <div class="card all websites">
             <div class="project-img" style="background-image: url(images/projects/ramadank.png);">
               <div class="caption">
-                رمضانك - simple islamic website 
+                رمضانك - simple islamic website
               </div>
             </div>
             <span class="links">
-              <a href="https://hessennasser.github.io/Prayer-Timings/" target="_blank"
-                class="link-view"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
+              <a href="https://hessennasser.github.io/Prayer-Timings/" target="_blank" class="link-view"><lord-icon
+                  src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
                   colors="primary:#ffffff,secondary:#ffffff" style="width:250px;height:250px">
                 </lord-icon></a>
-              <a href="https://github.com/hessennasser/Prayer-Timings" target="_blank"
-                class="link-view"><lord-icon src="https://cdn.lordicon.com/dtgezzsi.json" trigger="hover"
-                  colors="primary:#fff,secondary:#000" style="width:250px;height:250px">
+              <a href="https://github.com/hessennasser/Prayer-Timings" target="_blank" class="link-view"><lord-icon
+                  src="https://cdn.lordicon.com/dtgezzsi.json" trigger="hover" colors="primary:#fff,secondary:#000"
+                  style="width:250px;height:250px">
                 </lord-icon></a>
             </span>
           </div>
@@ -832,7 +831,7 @@
   <!-- start footer  -->
   <div class="footer">
     <div class="container">
-      <p class="footer-title">Copyrights 2022 @ <span>Smart DEV</span></p>
+      <p class="footer-title"></p>
       <div class="social-icons">
         <!-- <a href="https://www.facebook.com/profile.php?id=100071043262787" target="_blank"><i
             class="fa-brands fa-square-facebook"></i></a>
@@ -851,6 +850,54 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!-- js file link  -->
   <script src="main.js"></script>
+  <script>
+    // skills swiper 
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 7,
+      autoplay: {
+        delay: 2500, // 5 seconds delay between slides
+      },
+      loop: true, // enable loop mode
+      spaceBetween: 20,
+      centerSlide: "true",
+      fade: "true",
+      grabCursor: "true",
+      hashNavigation: {
+        watchState: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        767: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        968: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+      }
+    });
+
+
+    // tilt js effect 
+    VanillaTilt.init(document.querySelector(".services .content .box", ".skill"), {
+      reverse: true,
+      max: 180,
+      scale: 1.5,
+      speed: 600,
+    });
+  </script>
 </body>
 
 </html>

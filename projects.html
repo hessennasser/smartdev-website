@@ -56,19 +56,24 @@
                     <img src="images/logo shape.png" alt="smart dev logo shape">
                 </div>
                 <a class="nav-text" href="index.html">Smart DEV Website</a>
-                <li><a onclick="myFunction()" class="link-header" href="index.html">home</a></li>
-                <li><a onclick="myFunction()" class="link-header" href="projects.html">projects</a></li>
-                <li><a onclick="myFunction()" class="link-header" href="salla-stores.html">salla stores</a></li>
+                <li><a onclick="toggleNavigation()" class="link-header" href="index.html">home</a></li>
+                <li><a onclick="toggleNavigation()" class="link-header" href="projects.html">projects</a></li>
+                <li><a onclick="toggleNavigation()" class="link-header" href="salla-stores.html">salla stores</a></li>
             </ul>
         </div>
     </header>
     <!-- end header  -->
     <!-- start projects  -->
-    <div class="projects sub-page" id="projects">
+    <div class="projects work sub-page" id="projects">
         <div class="container">
             <h2 class="spacial-heading">projects</h2>
+            <ul class="filter">
+                <li data-category=".all" class="filter-item active">All Projects</li>
+                <li data-category=".websites" class="filter-item">websites</li>
+                <li data-category=".js" class="filter-item">Javascript applications</li>
+            </ul>
             <div class="content">
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/simple-profile.png);">
                         <div class="caption">
                             Responsive Profile Website
@@ -85,7 +90,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/leon.png);">
                         <div class="caption">
                             ELzero Template 1 By My Way
@@ -102,7 +107,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/kasper.png);">
                         <div class="caption">
                             ELzero Template 2 By My Way
@@ -119,7 +124,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/best.png);">
                         <div class="caption">
                             ELzero Template 3 By My Way
@@ -136,7 +141,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/elzero-dashboard.png);">
                         <div class="caption">
                             ELzero Template 4 By My Way
@@ -153,7 +158,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/solar-system.png);">
                         <div class="caption">
                             Responsive Solar System Landing Page
@@ -170,7 +175,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/landio.png);">
                         <div class="caption">
                             Responsive Landio - Landing page
@@ -187,7 +192,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img"
                         style="background-image: url(images/projects/money-responsive-landing-page.png);">
                         <div class="caption">
@@ -206,7 +211,7 @@
                                 </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/smartdev-blog.png);">
                         <div class="caption">
                             Responsive Blog Website Multipage
@@ -223,7 +228,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/zaya-digital.png);">
                         <div class="caption">
                             Zaya Digital - Landing Page
@@ -236,7 +241,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img"
                         style="background-image: url(images/projects/marketing-responsive-landing-page.png);">
                         <div class="caption">
@@ -254,7 +259,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img"
                         style="background-image: url(images/projects/agency-responsive-landing-page.png);">
                         <div class="caption">
@@ -272,7 +277,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/rab.png);">
                         <div class="caption">
                             رأب للتطوير العقاري
@@ -285,7 +290,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/bondi.png);">
                         <div class="caption">
                             Bondi Bootstrap Template
@@ -302,7 +307,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/saviour-care.png);">
                         <div class="caption">
                             Saviour-Care Landing Page By TailwindCSS
@@ -320,7 +325,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/tokners.png);">
                         <div class="caption">
                             Tokners Responsive Landing Page By TailwindCSS
@@ -337,7 +342,7 @@
                             </lord-icon></a>
                     </span>
                 </div>
-                <div class="card">
+                <div class="card all websites">
                     <div class="project-img" style="background-image: url(images/projects/ramadank.png);">
                         <div class="caption">
                             رمضانك - simple islamic website
