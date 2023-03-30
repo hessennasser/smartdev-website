@@ -15,6 +15,7 @@
     --main-padding-top: 60px;
     --main-padding-bottom: 60px;
     --section-background: #d0d0d086;
+    --white: #fff;
 }
 
 html {
@@ -61,7 +62,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 /* End Global Rules */
@@ -113,7 +114,7 @@ ul {
 
 .spacial-heading:hover {
     border-color: var(--main-color-alt);
-    color: #fff;
+    color: var(--white);
     transition-delay: .3s;
     ;
 }
@@ -152,7 +153,7 @@ ul {
     font-size: 35px;
     display: flex;
     transition: 0.5s;
-    color: #fff;
+    color: var(--white);
     background: rgb(0, 152, 255);
     background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
     animation: up-move 2s linear infinite;
@@ -235,19 +236,20 @@ ul.filter li {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--white);
     margin: 10px 0;
     text-transform: capitalize;
 }
 
 ul.filter li:hover {
-    background-color: #a9a8a8;
-    color: #fff;
+    background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
+    color: var(--white);
 }
+
 ul.filter li.active {
-    background-color: var(--main-color);
-    color: var(--second-color);
-    border: 2px solid var(--second-color);
+    background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 
 @media (max-width: 767px) {
@@ -318,7 +320,7 @@ header .menu-icon {
 header .menu-icon span {
     height: 2px;
     margin-bottom: 5px;
-    background-color: #fff;
+    background-color: var(--white);
     transition: var(--main-transition);
 }
 
@@ -415,21 +417,47 @@ header .nav .nav-text {
 header .nav li {
     margin: 0 15px 0 0;
     display: inline-block;
+    position: relative;
+    margin: 0 16px;
+    width: 100px;
+    text-align: center;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 header .nav li a {
-    color: #fff;
-    padding: 16px;
+    color: var(--white);
     text-transform: uppercase;
     font-size: .9em;
     transition: var(--main-transition);
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
 }
 
-header .nav li a:hover,
-header .nav li a:active,
-header .nav li a:focus {
-    color: var(--main-color);
-    border-bottom: 4px solid var(--main-color);
+header .nav li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    transition: width .6s;
+    -webkit-transition: width .6s;
+    -moz-transition: width .6s;
+    -ms-transition: width .6s;
+    -o-transition: width .6s;
+}
+
+header .nav li:hover::before,
+header .nav li:active::before,
+header .nav li:focus::before {
+    width: 100px;
 }
 
 @media (max-width: 991px) {
@@ -488,7 +516,7 @@ header .nav li a:focus {
 }
 
 .landing-social a {
-    color: #fff;
+    color: var(--white);
     margin-bottom: 20px;
     font-size: 26px;
     border: 1px solid;
@@ -503,7 +531,7 @@ header .nav li a:focus {
 
 .landing-social a:is(:hover, :active) {
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--white);
     border-radius: 50%;
 }
 
@@ -519,7 +547,7 @@ header .nav li a:focus {
 
 .landing-text :where(h1, h2) {
     font-size: 22px;
-    color: #fff;
+    color: var(--white);
     letter-spacing: 2px;
     margin: 0 0 10px;
 }
@@ -545,7 +573,7 @@ header .nav li a:focus {
 }
 
 .landing .btn {
-    color: #fff;
+    color: var(--white);
     padding: 10px 30px;
     background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
     margin-bottom: 20px;
@@ -573,7 +601,7 @@ header .nav li a:focus {
 }
 
 .landing .contact-btn:hover {
-    color: #fff;
+    color: var(--white);
     background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
 }
 
@@ -621,7 +649,7 @@ header .nav li a:focus {
     width: 100%;
     height: 250px;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--white);
     background: rgb(0, 152, 255);
     background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
     box-shadow: 0px 0px 10px #d0d0d0;
@@ -631,7 +659,7 @@ header .nav li a:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: solid 1px #fff;
+    border: solid 1px var(--white);
     transition: 0.3s;
     text-align: center;
     position: relative;
@@ -663,8 +691,8 @@ header .nav li a:focus {
 
 .services .content .box lord-icon {
     font-size: 2.5em;
-    color: #fff;
-    fill: #fff;
+    color: var(--white);
+    fill: var(--white);
     margin-bottom: 20px;
 }
 
@@ -672,7 +700,7 @@ header .nav li a:focus {
     font-size: 1.3em;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #fff;
+    color: var(--white);
     text-transform: capitalize;
 }
 
@@ -796,7 +824,7 @@ header .nav li a:focus {
 
 .caption {
     position: absolute;
-    color: #fff;
+    color: var(--white);
     font-weight: 700;
     font-size: 12px;
     bottom: 0px;
@@ -832,7 +860,7 @@ header .nav li a:focus {
 }
 
 .link-view {
-    color: #fff;
+    color: var(--white);
     font-size: 18px;
     margin: 0px 5px;
     background: linear-gradient(180deg, rgba(0, 152, 255, 1) 0%, rgba(128, 123, 208, 1) 100%);
@@ -877,14 +905,16 @@ header .nav li a:focus {
 .contact .content form .main-input {
     padding: 20px;
     display: block;
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--white);
     margin-bottom: 30px;
     width: 100%;
-    color: var(--main-color);
+    color: var(--white);
+    background-color: transparent;
+    border-radius: 12px;
 }
 
 .contact .content form .main-input::placeholder {
-    color: var(--main-color);
+    color: var(--white);
 }
 
 .contact .content form .main-input:focus {
@@ -946,6 +976,8 @@ header .nav li a:focus {
 .contact .content .info .box {
     padding: 20px;
     display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 @media (max-width:767px) {
@@ -962,11 +994,11 @@ header .nav li a:focus {
 .contact .content .info .box i {
     font-size: 1.7em;
     margin-right: 25px;
-    color: #fff;
+    color: var(--white);
 }
 
 .contact .content .info .box P {
-    color: #fff;
+    color: var(--white);
     font-size: .9em;
 }
 
@@ -990,7 +1022,6 @@ header .nav li a:focus {
 
 .contact .content .info .box .button {
     display: flex;
-    background: var(--main-color);
     padding: 5px 20px;
     width: 100%;
     text-align: center;
@@ -1004,21 +1035,21 @@ header .nav li a:focus {
     -o-transition: all .3s;
     margin-bottom: 15px;
     margin-bottom: 15px;
+    border: 1px solid var(--white);
     text-transform: uppercase;
 }
 
 .contact .content .info .box .button:hover {
-    background-color: var(--second-color);
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 
 .contact .content .info .box .button p,
 .contact .content .info .box .button i {
-    color: #fff;
+    color: var(--white);
 }
 
 .contact .content .info .box .button:hover p,
@@ -1068,14 +1099,19 @@ header .nav li a:focus {
     color: var(--main-color);
 }
 
+.footer .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 .footer .social-icons a {
     color: var(--main-color);
-    margin: 0 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     transition: var(--main-transition);
-    padding: 20px;
 }
 
 .footer .social-icons i {
@@ -1084,7 +1120,7 @@ header .nav li a:focus {
 }
 
 .footer .social-icons a:hover i {
-    color: #fff;
+    color: var(--white);
 }
 
 @media (max-width: 767px) {

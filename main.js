@@ -79,6 +79,8 @@ filterItems.forEach((item) => {
     item.addEventListener("click", removeActiveFilterItem);
     item.addEventListener("click", manageWorkCards);
 });
+
+window.onload = filterItems[0].click();
 // end filter  
 
 // update copyright year dynamically
@@ -86,9 +88,6 @@ const copyrightText = document.querySelector(".footer-title");
 const currentYear = new Date().getFullYear();
 
 copyrightText.innerHTML = `Copyright © ${currentYear} <span>Hessen Nasser</span>`;
-
-
-
 
 
 //scrollReveal
@@ -115,11 +114,10 @@ ScrollReveal().reveal('.services .box:nth-child(4)', { delay: 700, origin: "left
 ScrollReveal().reveal('.swiper-wrapper', { delay: 0, origin: "top" });
 
 // projects sections
+ScrollReveal().reveal('.filter li', { delay: 400, origin: "top", interval: 30 });
 ScrollReveal().reveal('.projects .card', { delay: 500, origin: "bottom", interval: 50 });
 ScrollReveal().reveal('.caption', { delay: 600, origin: "right" });
 //content section
 ScrollReveal().reveal('.main-input', { delay: 500, origin: "left", interval: 50 });
 ScrollReveal().reveal('.submit-btn', { delay: 500, origin: "bottom" });
 ScrollReveal().reveal('.contact .box,.box.social button', { delay: 600, origin: "right", interval: 50 });
-
-
