@@ -30,6 +30,7 @@
 </head>
 
 <body>
+  <div class="scrollProgress"><span></span></div>
   <!-- start button to move up page  -->
   <span class="up-btn-div">
     <span class="up-btn"><i class="fa-solid fa-up-long"></i></span>
@@ -57,11 +58,12 @@
           <img src="images/logo shape.png" alt="smart dev logo shape">
         </div>
         <a class="nav-text" href="index.html">Smart DEV Website</a>
-        <li><a onclick="toggleNavigation()" class="link-header" href="#home">home</a></li>
-        <li><a onclick="toggleNavigation()" class="link-header" href="#services">services</a></li>
-        <li><a onclick="toggleNavigation()" class="link-header" href="projects.html">projects</a></li>
-        <li><a onclick="toggleNavigation()" class="link-header" href="salla-stores.html">salla stores</a></li>
-        <li><a onclick="toggleNavigation()" class="link-header" href="#contact">contact</a></li>
+        <li><a onclick="toggleNavigation()" relSection="landing" class="link-header" href="#home">home</a></li>
+        <li><a onclick="toggleNavigation()" relSection="services" class="link-header" href="#services">services</a></li>
+        <li><a onclick="toggleNavigation()" relSection="skills" class="link-header" href="#skills">my skills</a></li>
+        <li><a onclick="toggleNavigation()" relSection="projects" class="link-header" href="projects.html">projects</a></li>
+        <li><a onclick="toggleNavigation()" relSection="salla" class="link-header" href="salla-stores.html">salla stores</a></li>
+        <li><a onclick="toggleNavigation()" relSection="contact" class="link-header" href="#contact">contact</a></li>
       </ul>
     </div>
   </header>

@@ -1,4 +1,4 @@
-// start header icon  
+/* ================================================== start header menu ================================================= */
 const menuIcon = document.querySelector(".menu-icon");
 const mainNavigation = document.querySelector(".nav");
 const headerLinks = document.querySelectorAll(".link-header");
@@ -12,9 +12,14 @@ function toggleNavigation() {
     menuIcon.classList.toggle("active");
     mainNavigation.classList.toggle("active");
 }
-// end header icon  
+// remove active class when scrolling
+window.onscroll = () => {
+    menuIcon.classList.remove("active");
+    mainNavigation.classList.remove("active");
+};
+/* ================================================== end header menu ================================================= */
 
-// start sticky header 
+/* ================================================== start sticky header ================================================= */
 const header = document.querySelector("header");
 
 function toggleStickyHeader() {
@@ -22,9 +27,9 @@ function toggleStickyHeader() {
 }
 
 window.addEventListener("scroll", toggleStickyHeader);
-// end sticky header 
+/* ================================================== end sticky header ================================================= */
 
-// start scroll-to-top button 
+/* ================================================== start scroll-to-top button ================================================= */
 const scrollToTopBtn = document.querySelector(".up-btn");
 
 function toggleScrollToTopButton() {
@@ -40,9 +45,9 @@ function scrollToTop() {
 
 window.addEventListener("scroll", toggleScrollToTopButton);
 scrollToTopBtn.addEventListener("click", scrollToTop);
-// end scroll-to-top button 
+/* ================================================== end scroll-to-top button ================================================= */
 
-// start WhatsApp button 
+/* ================================================== start WhatsApp button ================================================= */
 const whatsAppBtn = document.querySelector(".whats-btn");
 
 function toggleWhatsAppButton() {
@@ -50,9 +55,10 @@ function toggleWhatsAppButton() {
 }
 
 window.addEventListener("scroll", toggleWhatsAppButton);
-// end WhatsApp button 
+/* ================================================== end WhatsApp button ================================================= */
 
-// start filter  
+/* ===================================================== start filter ==================================================== */
+
 const filterItems = document.querySelectorAll(".filter-item");
 const workCards = document.querySelectorAll(".work .card");
 
@@ -81,16 +87,15 @@ filterItems.forEach((item) => {
 });
 
 window.onload = filterItems[0].click();
-// end filter  
+/* ===================================================== end filter ==================================================== */
 
-// update copyright year dynamically
+/* =============================== start update copyright year dynamically ============================================= */
 const copyrightText = document.querySelector(".footer-title");
 const currentYear = new Date().getFullYear();
 
 copyrightText.innerHTML = `Copyright © ${currentYear} <span>Hessen Nasser</span>`;
 
-
-//scrollReveal
+/* =============================== end update copyright year dynamically ============================================= */
 ScrollReveal({
     // reset: true,
     distance: "60px",
@@ -121,3 +126,60 @@ ScrollReveal().reveal('.caption', { delay: 600, origin: "right" });
 ScrollReveal().reveal('.main-input', { delay: 500, origin: "left", interval: 50 });
 ScrollReveal().reveal('.submit-btn', { delay: 500, origin: "bottom" });
 ScrollReveal().reveal('.contact .box,.box.social button', { delay: 600, origin: "right", interval: 50 });
+/* =============================== end scrollReveal ================================================= */
+
+/* =============================== start adding active class to navbar ============================== */
+// Cache the section elements
+const sections = document.querySelectorAll('section');
+
+// Define the debounce function
+function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function () {
+        const context = this, args = arguments;
+        const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+const offset = 100; // Set the distance from the top of the section
+window.addEventListener('scroll', debounce(function () {
+    const scrollPos = window.scrollY;
+    const links = document.querySelectorAll('.link-header');
+    links.forEach(link => {
+        const relSection = document.querySelector(`.${link.getAttribute("relSection")}`);
+        if (relSection.offsetTop - offset <= scrollPos && relSection.offsetTop + relSection.offsetHeight - offset > scrollPos) {
+            links.forEach(link => {
+                link.parentElement.classList.remove('active');
+            });
+            link.parentElement.classList.add('active');
+        } else {
+            link.parentElement.classList.remove('active');
+        }
+    });
+}));
+
+/* =============================== end adding active class to navbar ============================== */
+
+/* =============================== start make the scrollingProgress ============================== */
+
+// select the scrollProgress span element
+const scrollProgressElement = document.querySelector(".scrollProgress span");
+window.addEventListener("scroll", () => {
+    // Get the total height of the document
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    // Get the current scroll position
+    let scrollPosition = window.scrollY;
+    // Calculate the percentage of height scrolled
+    let percentageScrolled = Math.round((scrollPosition / totalHeight) * 100);
+
+    scrollProgressElement.style.width = `${percentageScrolled}%`;
+})
+
+/* =============================== end make the scrollingProgress ================================ */
