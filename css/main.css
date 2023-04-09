@@ -383,6 +383,57 @@ ul.filter li.active {
 
 /* end loader */
 
+/* start custom cursor   */
+
+.cursor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: var(--height);
+    transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+    transition-duration: 125ms;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition-property: width, height, transform;
+    transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: 1000000000000000;
+    pointer-events: none;
+    will-change: transform;
+}
+
+@media (pointer: fine) {
+    .cursor {
+        display: block;
+    }
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius);
+    border: 2px solid #fafaff;
+    opacity: var(--scale);
+    -webkit-transform: scale(var(--scale));
+    transform: scale(var(--scale));
+    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+        300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html:not(html:hover) .cursor::after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* end custom cursor   */
+
 /* end components  */
 /* start header  */
 header {
@@ -405,6 +456,10 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header .logo-name a {
+    display: block;
 }
 
 header .logo-name img {
