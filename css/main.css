@@ -385,7 +385,7 @@ ul.filter li.active {
 
 /* start custom cursor   */
 
-.cursor {
+/* .cursor {
     display: none;
     position: fixed;
     top: 0;
@@ -430,7 +430,7 @@ ul.filter li.active {
 html:not(html:hover) .cursor::after {
     opacity: 0;
     transform: scale(0);
-}
+} */
 
 /* end custom cursor   */
 
