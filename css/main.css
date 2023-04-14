@@ -889,6 +889,13 @@ header .nav li.active::before {
     gap: 30px;
     /* width: 100%; */
     position: relative;
+    background: linear-gradient(-45deg, var(--main-color), #27657d, var(--main-color), #2e5cd2);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(47, 121, 207, 0.15);
+    border-radius: 16px;
 }
 
 .mySwiper {
@@ -903,7 +910,7 @@ header .nav li.active::before {
 }
 
 .skill-text {
-    background: var(--main-color);
+    background: var(--second-color-alt);
     position: absolute;
     z-index: 100;
     top: 15px;
@@ -920,12 +927,12 @@ header .nav li.active::before {
 .skill-text::before {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 29px;
     width: 0;
     height: 0;
     border-width: 15px;
     border-style: solid;
-    border-color: transparent transparent var(--main-color) transparent;
+    border-color: transparent transparent var(--second-color-alt) transparent;
     transform: rotate(180deg);
 }
 
@@ -1429,6 +1436,19 @@ header .nav li.active::before {
 }
 
 
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 /* end animations  */
