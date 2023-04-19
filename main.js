@@ -157,10 +157,8 @@ window.addEventListener("scroll", () => {
 const loader = document.getElementById("loader");
 document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "hidden";
-    setTimeout(() => {
         loader.classList.remove("active");
         document.body.style.overflow = "auto";
-    }, 1200);
 });
 
 /* ========================================= end loader ======================================== */
