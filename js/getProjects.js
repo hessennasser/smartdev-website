@@ -26,6 +26,7 @@ onValue(projectsRef, (snapshot) => {
     const projects = snapshot.val();
     document.getElementById("projects").querySelector(".content").innerHTML = "";
     for (let project in projects) {
+        console.log(projects[project]);
         const projectHTML = `
             <div class="card ${projects[project].category}">
                 <div class="project-img" style="background-image: url(${projects[project].projectImg});">
@@ -52,9 +53,7 @@ onValue(projectsRef, (snapshot) => {
             </div>
         `;
         document.getElementById("projects").querySelector(".content").innerHTML += projectHTML;
-        ScrollReveal().reveal('.filter li', { delay: 400, origin: "top", interval: 30 });
-        ScrollReveal().reveal('.projects .card', { delay: 500, origin: "bottom", interval: 50 });
-        // Add filter initialization code here
+
         const filterItems = document.querySelectorAll(".filter-item");
         const workCards = document.querySelectorAll(".work .card");
         function removeActiveFilterItem() {
@@ -78,6 +77,8 @@ onValue(projectsRef, (snapshot) => {
             item.addEventListener("click", manageWorkCards);
         });
         filterItems[0].click(); // Trigger the click event on the first filter item
+
+
     }
 }, (error) => {
     console.error(error);
