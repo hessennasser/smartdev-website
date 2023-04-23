@@ -22,8 +22,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
-  <!-- scrollReveal cdn link  -->
-  <script src="https://unpkg.com/scrollreveal"></script>
   <!-- swiper js cdn link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -186,7 +184,7 @@
             <p class="landing-phara">I am experienced in developing and designing websites with <span>more than 1 year
                 of experience</span></p>
             <a aria-label="view my Projects" href="#projects" class="btn">view my Projects</a>
-            <a aria-label="contact me" href="#contact" class="btn contact-btn">content me</a>
+            <a aria-label="contact me" href="#contact" class="btn contact-btn">contact me</a>
             <!-- <a aria-label="download CV" download href="CV.pdf" class="btn contact-btn">Download CV</a> -->
           </div>
         </div>
@@ -311,7 +309,7 @@
           <li data-category=".react" class="filter-item">React applications</li>
         </ul>
         <div class="content">
-          
+
         </div>
       </div>
     </div>
@@ -687,19 +685,21 @@
     </div>
   </div>
   <!-- end footer  -->
+
+  <script src="js/main.js"></script>
   <!-- tilt js library  -->
 	<script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
   <!-- jquery cdn link  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!-- js file link  -->
-  <script src="js/getProjects.js" type="module"></script>
-  <script src="js/main.js"></script>
+  <script src="js/getProjects.js" defer type="module"></script>
   <script>
+    // skills swiper 
     // skills swiper 
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 7,
       autoplay: {
-        delay: 2500, // 5 seconds delay between slides
+        delay: 1500, // 1.5 seconds delay between slides
       },
       loop: true, // enable loop mode
       spaceBetween: 20,
@@ -709,6 +709,7 @@
       hashNavigation: {
         watchState: true,
       },
+      preventClicks: false, // Allow clicks to pass through
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -732,8 +733,6 @@
         },
       }
     });
-
-
     // tilt js effect 
     VanillaTilt.init(document.querySelector(".services .content .box", ".skill"), {
       reverse: true,
@@ -741,6 +740,45 @@
       scale: 1.5,
       speed: 600,
     });
+
+    /* =============================== start adding active class to navbar ============================== */
+    // Cache the section elements
+    const sections = document.querySelectorAll('section');
+
+    // Define the debounce function
+    function debounce(func, wait = 20, immediate = true) {
+      let timeout;
+      return function () {
+        const context = this, args = arguments;
+        const later = function () {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+    const offset = 120; // Set the distance from the top of the section
+    window.addEventListener('scroll', debounce(function () {
+      const scrollPos = window.scrollY;
+      const links = document.querySelectorAll('.link-header');
+      links.forEach(link => {
+        const relSection = document.querySelector(`.${link.getAttribute("relSection")}`);
+        if (relSection.offsetTop - offset <= scrollPos && relSection.offsetTop + relSection.offsetHeight - offset > scrollPos) {
+          links.forEach(link => {
+            link.parentElement.classList.remove('active');
+          });
+          link.parentElement.classList.add('active');
+        } else {
+          link.parentElement.classList.remove('active');
+        }
+      });
+    }));
+
+    /* =============================== end adding active class to navbar ============================== */
   </script>
 </body>
 

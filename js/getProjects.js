@@ -26,7 +26,6 @@ onValue(projectsRef, (snapshot) => {
     const projects = snapshot.val();
     document.getElementById("projects").querySelector(".content").innerHTML = "";
     for (let project in projects) {
-        console.log(projects[project]);
         const projectHTML = `
             <div class="card ${projects[project].category}">
                 <div class="project-img" style="background-image: url(${projects[project].projectImg});">
