@@ -954,6 +954,8 @@ canvas.particles-js-canvas-el {
 
 .landing-text {
     padding-left: 30px;
+    position: relative;
+    z-index: 10;
 }
 
 .landing-text h1 {
