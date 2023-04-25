@@ -798,6 +798,9 @@ canvas.particles-js-canvas-el {
         order: 1;
         flex-direction: row;
         gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     .landing-img {
@@ -895,7 +898,7 @@ canvas.particles-js-canvas-el {
 /* start skills  */
 .skills .skills-holder {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -982,6 +985,12 @@ canvas.particles-js-canvas-el {
 .skills .skill:hover .skill-icon {
     border-radius: 50%;
     scale: 1.1;
+}
+
+@media  (max-width: 550px) {
+    .skills .skills-holder {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
 
 /* end skills  */
