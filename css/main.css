@@ -671,11 +671,17 @@ header .nav li.active::before {
     gap: 40px;
     background: linear-gradient(130deg, rgb(6 8 10) 0%, rgb(30 119 191) 100%);
     padding: 50px;
+    padding-left: 0;
     border-radius: 30px;
     border-top-right-radius: 75px;
     border: 1px solid rgb(255 255 255);
     margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
 
+canvas.particles-js-canvas-el {
+    position: absolute;
 }
 
 .landing-social {
@@ -684,6 +690,7 @@ header .nav li.active::before {
     justify-content: space-between;
     flex-direction: column;
     order: 3;
+    z-index: 10;
 }
 
 .landing-social a {
@@ -709,6 +716,10 @@ header .nav li.active::before {
 
 .landing-img img {
     width: 60%;
+}
+
+.landing-text {
+    padding-left: 30px;
 }
 
 .landing-text h1 {
