@@ -883,27 +883,20 @@ header .nav li.active::before {
 /* end services  */
 /* start skills  */
 .skills .skills-holder {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    justify-items: center;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    /* width: 100%; */
     position: relative;
-    /* background: linear-gradient(-45deg, var(--main-color), #27657d, var(--main-color), #2e5cd2);
-    background-size: 400% 400%;
-    animation: gradient-animation 10s ease infinite;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(47, 121, 207, 0.15);
-    border-radius: 16px; */
+    padding: 40px 0;
 }
 
-.mySwiper {
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
+.skill-holder {
+    margin: 0 auto;
+    height: 200px;
     position: relative;
-    overflow: hidden;
     list-style: none;
     padding: 0;
     z-index: 1;
@@ -913,7 +906,9 @@ header .nav li.active::before {
     background: var(--main-color);
     position: absolute;
     z-index: 100;
-    top: 15px;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
     width: max-content;
     height: 30px;
     padding: 10px 20px;
@@ -922,6 +917,10 @@ header .nav li.active::before {
     justify-content: center;
     color: #fff;
     border-radius: 6px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 .skill-text::before {

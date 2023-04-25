@@ -56,10 +56,6 @@ copyrightText.innerHTML = `Copyright © ${currentYear} <span>Hessen Nasser</span
 /* =============================== end update copyright year dynamically ============================================= *//* =============================== start make the scrollingProgress ============================== */
 
 // select the scrollProgress span element
-const scrollProgressElement = document.querySelector(".scrollProgress span");
-window.addEventListener("scroll", () => {
-});
-
 /* =============================== end make the scrollingProgress ================================ */
 
 /* ========================================= start loader ======================================== */
@@ -90,6 +86,7 @@ window.addEventListener("scroll", () => {
     // Calculate the percentage of height scrolled
     let percentageScrolled = Math.round((scrollPosition / totalHeight) * 100);
 
+    const scrollProgressElement = document.querySelector(".scrollProgress span");
     scrollProgressElement.style.width = `${percentageScrolled}%`;
 
 });
