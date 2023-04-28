@@ -5,12 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Dev</title>
   <meta name="description"
     content="  Hi I'm smart dev (hessen nasser)
   Front End Developer I am experienced in developing and designing websites with more than 1 year of experience and I can create your spacial website from zero to hero by using best practices.">
+  <meta name="title" content="Smart Dev">
   <meta name="keywords"
     content="smartdev, smart dev, sm8rtdev, sm8rt dev, smartdev website, sm8rtdev website, smart dev website, sm8rt dev website, hessen nasser profile, front-end developer, website developer, website designer, hessen alosh, smart dev profile, smartdev profile, smartdev.online, sma8rtdev.online, salla developer, salla designer, salla stores, salla,salla editor, hessen nasser, hessen nasser website, graphic designer, video editor, UX & UI designer, front end developer, JS developer, مطور سلة , منصة سله ,حسين ناصر , سمارت ديف ,مطور ويب, مصمم ويب">
-  <title>Smart Dev</title>
   <link rel="icon" type="image/x-icon" href="images/logo shape.png">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -643,10 +644,11 @@
       <div class="container">
         <h2 class="spacial-heading">contact</h2>
         <div class="content">
-          <form action="">
+          <form id="contact-form" action="https://formspree.io/f/xknakdol" method="POST">
             <input type="text" name="name" class="main-input" placeholder="Your Name" required>
             <input type="email" name="email" class="main-input" placeholder="Your Email" required>
             <textarea name="message" class="main-input" placeholder="Your Message" style="resize: none;"></textarea required>
+            <p class="form-statue" id="form-statue"></p>
           <input type="submit" class="submit-btn" value="Send Message">
         </form>
         <div class="info">
@@ -718,8 +720,31 @@
   <script src="js/scrollNavbarEffect.js"></script>
   <script src="js/main.js"></script>
   <script src="js/particles.js-master/particles.js"></script>
-<script src="js/particles.js-master/demo/js/app.js"></script>
+  <script src="js/particles.js-master/demo/js/app.js"></script>
+<script>
+  var contactForm = document.getElementById("contact-form");
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("form-statue");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: contactForm.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      status.classList.add("success");
+      status.innerHTML = "✔︎ Thank you, We have received your email.";
+      contactForm.reset()
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  contactForm.addEventListener("submit", handleSubmit)
+
+</script>
   <script>
     // tilt js effect 
     VanillaTilt.init(document.querySelector(".services .content .box", ".skill"), {

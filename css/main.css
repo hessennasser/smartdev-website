@@ -1132,6 +1132,22 @@ canvas.particles-js-canvas-el {
     height: 200px;
 }
 
+p.form-statue {
+    color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+p.form-statue.success {
+    background: green;
+}
+
+p.form-statue.error {
+    background: rgb(166, 43, 43);
+}
 
 .contact .content form input[type="submit"] {
     background-color: var(--main-color);
