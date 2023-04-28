@@ -662,7 +662,6 @@ canvas.particles-js-canvas-el {
     justify-content: space-between;
     flex-direction: column;
     order: 3;
-    z-index: 10;
 }
 
 .landing-social a {
@@ -677,6 +676,8 @@ canvas.particles-js-canvas-el {
     display: flex;
     justify-content: center;
     transition: var(--main-transition);
+    pointer-events: auto;
+    z-index: 10;
 }
 
 .landing-social a:is(:hover, :active) {
@@ -693,7 +694,6 @@ canvas.particles-js-canvas-el {
 .landing-text {
     padding-left: 30px;
     position: relative;
-    z-index: 10;
 }
 
 .landing-text h1 {
@@ -754,6 +754,8 @@ canvas.particles-js-canvas-el {
     background: transparent;
     border: 1px solid var(--main-color);
     transition: var(--main-transition);
+    pointer-events: auto;
+    z-index: 10;
 }
 
 .landing .contact-btn:hover {
