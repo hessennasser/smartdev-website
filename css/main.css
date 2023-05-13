@@ -750,7 +750,7 @@ canvas.particles-js-canvas-el {
     border: 1px solid var(--main-color);
 }
 
-.landing .contact-btn {
+.landing .btn {
     background: transparent;
     border: 1px solid var(--main-color);
     transition: var(--main-transition);
