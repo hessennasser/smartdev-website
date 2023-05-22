@@ -34,20 +34,11 @@ onValue(projectsRef, (snapshot) => {
                     </div>
                 </div>
                 <span class="links">
-                ${projects[project].demoLink === projects[project].repositoryLink ? `<a href="${projects[project].repositoryLink}" target="_blank"
-                class="link-view"><lord-icon src="https://cdn.lordicon.com/dtgezzsi.json"
-                    trigger="hover" colors="primary:#fff,secondary:#000"
-                    style="width:250px;height:250px">
-                </lord-icon></a>` : ` <a href="${projects[project].demoLink}" target="_blank"
-                class="link-view"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json"
-                    trigger="hover" colors="primary:#ffffff,secondary:#ffffff"
-                    style="width:250px;height:250px">
-                </lord-icon></a>
-            <a href="${projects[project].repositoryLink}" target="_blank"
-                class="link-view"><lord-icon src="https://cdn.lordicon.com/dtgezzsi.json"
-                    trigger="hover" colors="primary:#fff,secondary:#000"
-                    style="width:250px;height:250px">
-                </lord-icon></a>`}
+                ${projects[project].demoLink === projects[project].repositoryLink ?
+                `<a href="${projects[project].repositoryLink}" target="_blank" class="link-view"><img src="../images/code.gif" style="width: 70px" alt="smart dev"></a>`
+                :
+                ` <a href="${projects[project].demoLink}" target="_blank" class="link-view"><img src="../images/eye.gif" style="width: 70px" alt="smart dev"></a>
+            <a href="${projects[project].repositoryLink}" target="_blank" class="link-view"><img src="../images/code.gif" style="width: 70px" alt="smart dev"></a>`}
                 </span>
             </div>
         `;
