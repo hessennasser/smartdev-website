@@ -35,7 +35,7 @@ onValue(projectsRef, (snapshot) => {
                 </div>
                 <span class="links">
                 ${projects[project].demoLink === projects[project].repositoryLink ?
-                `<a href="${projects[project].repositoryLink}" target="_blank" class="link-view"><img src="../images/code.gif" style="width: 70px" alt="smart dev"></a>`
+                `<a href="${projects[project].repositoryLink}" target="_blank" class="link-view"><img src="../images/eye.gif" style="width: 70px" alt="smart dev"></a>`
                 :
                 ` <a href="${projects[project].demoLink}" target="_blank" class="link-view"><img src="../images/eye.gif" style="width: 70px" alt="smart dev"></a>
             <a href="${projects[project].repositoryLink}" target="_blank" class="link-view"><img src="../images/code.gif" style="width: 70px" alt="smart dev"></a>`}
