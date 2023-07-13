@@ -387,25 +387,6 @@ ul.filter li.active {
 
 /* end loader */
 
-/* start spikes  */
-
-.spikes::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: -0%;
-    top: 100%;
-    z-index: 10;
-    display: block;
-    height: 25px;
-    background-size: 15px 100%;
-    background-image: linear-gradient(135deg, var(--second-color-alt) 25%, transparent 25%), linear-gradient(225deg, var(--second-color-alt) 25%, transparent 25%);
-    background-position: 0 0;
-}
-
-/* end spikes  */
-
-
 /* end components  */
 /* start header  */
 header {
@@ -422,6 +403,7 @@ header {
 header.sticky {
     box-shadow: 0px 2px 20px 3px #000;
     background: #163850;
+    border-radius: 0 0 3rem 3rem;
 }
 
 header .container {
@@ -625,8 +607,18 @@ header .nav li.active::before {
     padding-bottom: var(--main-padding-bottom);
     background-position: center;
     background-size: cover;
-    position: relative;
     display: flex;
+    /* sticky */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.up-hero {
+    background: rgb(21 31 40);
+    z-index: 100;
+    position: relative;
+    border-radius: 3rem 3rem 0 0;
 }
 
 .landing .container {
@@ -1300,13 +1292,18 @@ p.form-statue.error {
     background-color: #163850;
     color: white;
     padding: 2em;
+    border-radius: 3rem 3rem 0 0;
+    -webkit-border-radius: 3rem 3rem 0 0;
+    -moz-border-radius: 3rem 3rem 0 0;
+    -ms-border-radius: 3rem 3rem 0 0;
+    -o-border-radius: 3rem 3rem 0 0;
 }
 
 .footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 70px;
+    padding: 30px 70px;
 }
 
 .footer .container {
