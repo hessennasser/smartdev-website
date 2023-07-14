@@ -147,7 +147,7 @@ section {
     width: 60px;
     height: 60px;
     bottom: -100px;
-    z-index: 20;
+    z-index: 1000;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.5s;
