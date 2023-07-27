@@ -795,14 +795,13 @@ canvas.particles-js-canvas-el {
 }
 
 .services .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
-    justify-items: center;
+    justify-content: center;
 }
 
 .services .content .box {
-    width: 100%;
     height: 250px;
     padding: 20px;
     background-color: var(--white);
@@ -868,12 +867,10 @@ canvas.particles-js-canvas-el {
 /* end services  */
 /* start skills  */
 .skills .skills-holder {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     position: relative;
     padding: 40px 0;
 }
@@ -977,10 +974,10 @@ canvas.particles-js-canvas-el {
 }
 
 .projects .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
-    justify-items: center;
     width: 100%;
     padding: 15px 0;
 }
