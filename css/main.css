@@ -611,6 +611,9 @@ header .nav li.active::before {
     background-position: center;
     background-size: cover;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
     /* sticky */
     position: sticky;
     top: 0;
@@ -621,7 +624,12 @@ header .nav li.active::before {
     background: rgb(21 31 40);
     z-index: 100;
     position: relative;
+    box-shadow: 0 0 20px rgb(22 151 255 / 82%);
     border-radius: 3rem 3rem 0 0;
+    -webkit-border-radius: 3rem 3rem 0 0;
+    -moz-border-radius: 3rem 3rem 0 0;
+    -ms-border-radius: 3rem 3rem 0 0;
+    -o-border-radius: 3rem 3rem 0 0;
 }
 
 .landing .container {
@@ -1297,6 +1305,7 @@ p.form-statue.error {
     -moz-border-radius: 3rem 3rem 0 0;
     -ms-border-radius: 3rem 3rem 0 0;
     -o-border-radius: 3rem 3rem 0 0;
+    box-shadow: 0 0 20px rgb(42 68 91);
 }
 
 .footer .container {
