@@ -79,7 +79,7 @@
 			return (
 				(n.className = 'video-section'),
 				(n.innerHTML =
-					'\n                <div class="container">\n                    <div class="row">\n                        <div class="col-12">\n                            <div class="video-container">\n                                <video width="100%" height="100%" loop autoplay muted playsinline preload="metadata" poster="">\n                                    <source src="https://nussuq-dev.com/ucv/1.mp4" type="video/mp4">\n                                    Your browser does not support the video tag.\n                                </video>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            '),
+					'\n                <div class="container">\n                    <div class="row">\n                        <div class="col-12">\n                            <div class="video-container">\n                                <video width="100%" height="100%" loop autoplay muted playsinline preload="metadata" poster="">\n                                    <source src="https://nussuq-dev.com/leo/1.mp4" type="video/mp4">\n                                    Your browser does not support the video tag.\n                                </video>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            '),
 				n
 			);
 		}
@@ -330,3 +330,4 @@
 			'complete' !== document.readyState &&
 				window.addEventListener('load', o)));
 })();
+
