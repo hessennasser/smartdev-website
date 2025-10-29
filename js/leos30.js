@@ -317,7 +317,7 @@
 		const e = window.location.pathname,
 			n = window.location.hostname;
 		return !(
-			('leos30.com' !== n && 'www.leos30.com' !== n) ||
+			('leos10.com' !== n && 'www.leos10.com' !== n) ||
 			('/' !== e && '' !== e && '/index.html' !== e && '/home' !== e)
 		);
 	})() &&
@@ -330,4 +330,5 @@
 			'complete' !== document.readyState &&
 				window.addEventListener('load', o)));
 })();
+
 
