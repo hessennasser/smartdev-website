@@ -140,7 +140,7 @@
         // Page Detection
         targetPages: {
             hostnames: ['leva10.com', 'www.leva10.com'],
-            paths: ['/products']
+            paths: ['/']
         },
 
         // SECTION INSERTION SELECTORS - Configure where each section should be inserted
@@ -895,5 +895,6 @@
     }
 
     Logger.info('📝 Script setup complete, waiting for initialization triggers');
+
 
 })();
