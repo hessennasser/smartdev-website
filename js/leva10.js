@@ -60,7 +60,7 @@
             ],
 
             // Position: Choose ONE option (delete or comment out the others)
-            insertBefore: '.footer, footer',  // Insert before this element
+            insertBefore: '.section.bg-testimonials',  // Insert before this element
             // insertAfter: '.bg-testimonials',  // OR insert after this element
             // appendTo: '.home',  // OR append inside this element
         },
@@ -381,6 +381,7 @@
     }
 
 })();
+
 
 
 
