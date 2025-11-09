@@ -28,7 +28,7 @@
 
             // Position: Choose ONE option (delete or comment out the others)
             // insertAfter: '.main-slider-section',  // Insert after this element
-            insertBefore: 'section:nth-of-type(2)',  // OR insert before the last .main-slider-section
+            insertBefore: 'section:nth-of-type(4)',  // OR insert before the last .main-slider-section
             // appendTo: '.home',  // OR append inside this element
         },
 
@@ -37,10 +37,6 @@
             enabled: true,
             title: 'الأسئلة الشائعة',
             items: [
-                {
-                    question: 'وين الجودة والمصدر اللي يدعم الاشتراك؟',
-                    answer: 'نحن نقدم منتجات عالية الجودة من مصادر موثوقة مع ضمان الجودة والأصالة.'
-                },
                 {
                     question: 'هل يوجد ضمان على الاشتراك؟',
                     answer: 'نعم، نوفر ضمان شامل على جميع اشتراكاتنا مع إمكانية الاستبدال أو الاسترداد.'
@@ -54,24 +50,12 @@
                     answer: 'نعم، نقوم بتحديث التطبيقات بانتظام لضمان أفضل أداء وأحدث المميزات.'
                 },
                 {
-                    question: 'هل متجر leva10 موثق؟',
-                    answer: 'متجرنا مرخص ومعتمد رسمياً مع سجل تجاري ساري المفعول.'
-                },
-                {
-                    question: 'كم مدة تسليم الطلب وكيف أستلم طلبي؟',
-                    answer: 'مدة التسليم من 1-3 أيام عمل، ويتم التسليم عبر شركات الشحن المعتمدة.'
-                },
-                {
-                    question: 'هل يوجد الاشتراك في حال سويت فورمات؟',
-                    answer: 'الاشتراك محفوظ في حسابك ويمكن استرداده حتى بعد الفورمات.'
-                },
-                {
-                    question: 'كم مدة الاشتراك؟',
-                    answer: 'تتراوح مدة الاشتراك حسب الباقة المختارة من شهر إلى سنة كاملة.'
+                    question: 'كم مدة تفعيل الاشتراك؟',
+                    answer: 'يتم تفعيل الاشتراك فورًا خلال أقل من 24 ساعة.'
                 },
                 {
                     question: 'هل يوجد دعم فني؟',
-                    answer: 'نوفر دعم فني متاح 24/7 عبر الواتساب والبريد الإلكتروني.'
+                    answer: 'نوفر دعم فني متاح 24/7 عبر الواتساب.'
                 }
             ],
 
@@ -397,6 +381,7 @@
     }
 
 })();
+
 
 
 
