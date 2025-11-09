@@ -28,7 +28,7 @@
 
             // Position: Choose ONE option (delete or comment out the others)
             // insertAfter: '.main-slider-section',  // Insert after this element
-            insertBefore: '.main-slider-section',  // OR insert before the last .main-slider-section
+            insertBefore: '.main-slider-section:last-of-type',  // OR insert before the last .main-slider-section
             // appendTo: '.home',  // OR append inside this element
         },
 
@@ -397,4 +397,5 @@
     }
 
 })();
+
 
