@@ -21,14 +21,14 @@
         // Video Section - Edit this data
         video: {
             enabled: true,
-            title: 'شاهد عرض المنتج',
-            description: 'تعرف على مميزات اشتراكاتنا',
-            videoUrl: 'https://nussuq-dev.com/leo/1.mp4',
+            title: '',
+            description: '',
+            videoUrl: 'https://nussuq-dev.com/leva/1.MP4',
             posterUrl: '', // Optional: poster image URL
 
             // Position: Choose ONE option (delete or comment out the others)
             // insertAfter: '.main-slider-section',  // Insert after this element
-            insertBefore: '.main-slider-section:last-of-type',  // OR insert before the last .main-slider-section
+            insertBefore: '#2967e87c-6ca7-44bb-bd0c-c23adc80840b',  // OR insert before the last .main-slider-section
             // appendTo: '.home',  // OR append inside this element
         },
 
