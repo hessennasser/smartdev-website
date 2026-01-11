@@ -142,6 +142,7 @@
             /* Video Section */
             .video-section {
                 padding: 2rem 0;
+                display:none !important;
             }
             .video-section .section-title {
                 color: white !important;
@@ -381,6 +382,7 @@
     }
 
 })();
+
 
 
 
