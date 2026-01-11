@@ -23,7 +23,7 @@
             enabled: true,
             title: '',
             description: '',
-            videoUrl: 'https://nussuq-dev.com/leva/1.MP4',
+            videoUrl: '',
             posterUrl: '', // Optional: poster image URL
 
             // Position: Choose ONE option (delete or comment out the others)
@@ -381,6 +381,7 @@
     }
 
 })();
+
 
 
 
